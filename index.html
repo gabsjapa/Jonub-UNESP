@@ -11,11 +11,13 @@
   <style>
     html {
       scroll-behavior: smooth;
-      scroll-padding-top: 120px;   /* Ajustado para iPhone */
+      scroll-padding-top: 110px; /* Otimizado para iPhone */
     }
-    section {
-      scroll-margin-top: 120px;
+    
+    section[id] {
+      scroll-margin-top: 130px;
     }
+    
     #home {
       scroll-margin-top: 0;
     }
@@ -23,7 +25,7 @@
 </head>
 <body class="bg-creme">
 
-  <!-- NAVEGAÇÃO -->
+  <!-- NAVEGAÇÃO FIXA -->
   <nav class="bg-creme border-b border-[#e8d9c0] sticky top-0 z-50 shadow-sm">
     <div class="max-w-7xl mx-auto px-4 py-4">
       <div class="flex justify-between items-center">
@@ -124,7 +126,7 @@
     <p class="text-dark text-xl">© 2026 JONUB - Jornada de Nutrição da UNESP de Botucatu</p>
   </footer>
 
-  <!-- Script -->
+  <!-- Script simples -->
   <script>
     const menuBtn = document.getElementById('menu-btn');
     const mobileMenu = document.getElementById('mobile-menu');
@@ -134,14 +136,7 @@
     });
 
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-      anchor.addEventListener('click', function(e) {
-        e.preventDefault();
-        const target = document.querySelector(this.getAttribute('href'));
-        if (target) {
-          const navHeight = (this.getAttribute('href') === '#home') ? 20 : 120;
-          const offset = target.getBoundingClientRect().top + window.scrollY - navHeight;
-          window.scrollTo({ top: offset, behavior: 'smooth' });
-        }
+      anchor.addEventListener('click', () => {
         mobileMenu.classList.add('hidden');
       });
     });
