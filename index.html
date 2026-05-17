@@ -7,6 +7,15 @@
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
   <link rel="stylesheet" href="style.css">
+  <style>
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 110px;
+    }
+    section[id] {
+      scroll-margin-top: 110px;
+    }
+  </style>
 </head>
 <body class="bg-creme">
 
@@ -64,8 +73,8 @@
     </div>
   </header>
 
-  <!-- SEÇÕES -->
-  <section id="sobre" class="pt-20 pb-16 bg-white">
+  <!-- SOBRE -->
+  <section id="sobre" class="pt-8 pb-16 bg-white">
     <div class="max-w-4xl mx-auto px-4">
       <h2 class="text-4xl md:text-5xl font-bold title-font text-dark mb-12 text-center">Sobre a JONUB</h2>
       <div class="text-gray-700 leading-relaxed text-[17px] md:text-lg space-y-6">
@@ -76,24 +85,28 @@
     </div>
   </section>
 
-  <section id="atividades" class="pt-20 pb-16 bg-creme text-center">
+  <!-- ATIVIDADES -->
+  <section id="atividades" class="pt-8 pb-16 bg-creme text-center">
     <h2 class="text-4xl md:text-5xl font-bold title-font text-dark mb-10">Atividades</h2>
   </section>
 
-  <section id="convidados" class="pt-20 pb-16 bg-white text-center">
+  <!-- CONVIDADOS -->
+  <section id="convidados" class="pt-8 pb-16 bg-white text-center">
     <h2 class="text-4xl md:text-5xl font-bold title-font text-dark mb-10">Convidados</h2>
   </section>
 
-  <section id="submissoes" class="pt-20 pb-16 bg-creme text-center">
+  <!-- SUBMISSÕES -->
+  <section id="submissoes" class="pt-8 pb-16 bg-creme text-center">
     <h2 class="text-4xl md:text-5xl font-bold title-font text-dark mb-10">Submissões</h2>
   </section>
 
-  <section id="contato" class="pt-20 pb-16 bg-white text-center">
+  <!-- CONTATO -->
+  <section id="contato" class="pt-8 pb-16 bg-white text-center">
     <h2 class="text-4xl md:text-5xl font-bold title-font text-dark mb-10">Contato</h2>
   </section>
 
   <!-- INSCRIÇÕES -->
-  <section id="inscricoes" class="pt-20 pb-16 bg-creme text-center">
+  <section id="inscricoes" class="pt-8 pb-16 bg-creme text-center">
     <div class="max-w-4xl mx-auto px-4">
       <h2 class="text-4xl font-bold mb-8 text-dark">Inscreva-se no JONUB 2026</h2>
       <a href="https://cheers.com.br" target="_blank" class="btn-inscreva text-xl">
@@ -107,7 +120,7 @@
     <p class="text-dark text-xl">© 2026 JONUB - Jornada de Nutrição da UNESP de Botucatu</p>
   </footer>
 
-  <!-- Script de Rolagem Suave -->
+  <!-- Script simples -->
   <script>
     const menuBtn = document.getElementById('menu-btn');
     const mobileMenu = document.getElementById('mobile-menu');
@@ -116,26 +129,8 @@
       mobileMenu.classList.toggle('hidden');
     });
 
-    // Rolagem suave otimizada para iPhone
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-      anchor.addEventListener('click', function(e) {
-        e.preventDefault();
-        
-        const targetId = this.getAttribute('href').substring(1);
-        const target = document.getElementById(targetId);
-        
-        if (target) {
-          const navHeight = 95;
-          const elementPosition = target.getBoundingClientRect().top;
-          const offsetPosition = elementPosition + window.scrollY - navHeight;
-
-          window.scrollTo({
-            top: offsetPosition,
-            behavior: 'smooth'
-          });
-        }
-
-        // Fechar menu mobile
+      anchor.addEventListener('click', () => {
         mobileMenu.classList.add('hidden');
       });
     });
