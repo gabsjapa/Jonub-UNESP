@@ -14,7 +14,15 @@
   <style>
     html {
       scroll-behavior: smooth;
-      scroll-padding-top: 100px;
+      scroll-padding-top: 95px;   /* Ajustado para mobile */
+    }
+
+    section[id] {
+      scroll-margin-top: 115px;
+    }
+
+    #home {
+      scroll-margin-top: 0;
     }
   </style>
 </head>
@@ -73,7 +81,7 @@
     </div>
   </header>
 
-  <!-- CONTEÚDO -->
+  <!-- SOBRE -->
   <section id="sobre" class="pt-12 pb-20 bg-white">
     <div class="max-w-4xl mx-auto px-4">
       <h2 class="text-4xl md:text-5xl font-bold title-font text-dark mb-12 text-center">Sobre a JONUB</h2>
@@ -85,6 +93,7 @@
     </div>
   </section>
 
+  <!-- Outras seções -->
   <section id="atividades" class="pt-12 pb-20 bg-creme text-center">
     <h2 class="text-4xl md:text-5xl font-bold title-font text-dark mb-10">Atividades</h2>
   </section>
@@ -101,6 +110,7 @@
     <h2 class="text-4xl md:text-5xl font-bold title-font text-dark mb-10">Contato</h2>
   </section>
 
+  <!-- INSCRIÇÕES -->
   <section id="inscricoes" class="pt-12 pb-20 bg-creme text-center">
     <div class="max-w-4xl mx-auto px-4">
       <h2 class="text-4xl font-bold mb-8 text-dark">Inscreva-se no JONUB 2026</h2>
@@ -110,6 +120,7 @@
     </div>
   </section>
 
+  <!-- RODAPÉ -->
   <footer class="bg-creme border-t border-[#e8d9c0] py-12 text-center">
     <p class="text-dark text-xl">© 2026 JONUB - Jornada de Nutrição da UNESP de Botucatu</p>
   </footer>
@@ -118,13 +129,16 @@
     const menuBtn = document.getElementById('menu-btn');
     const mobileMenu = document.getElementById('mobile-menu');
 
-    menuBtn.addEventListener('click', () => mobileMenu.classList.toggle('hidden'));
+    menuBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
 
-    document.querySelectorAll('a[href^="#"]').forEach(link => {
-      link.addEventListener('click', function() {
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', () => {
         mobileMenu.classList.add('hidden');
       });
     });
   </script>
+
 </body>
 </html>
