@@ -10,7 +10,7 @@
 </head>
 <body class="bg-creme">
 
-  <!-- NAVEGAÇÃO -->
+  <!-- NAVEGAÇÃO (mantida) -->
   <nav class="bg-creme border-b border-[#e8d9c0] sticky top-0 z-50 shadow-sm">
     <div class="max-w-7xl mx-auto px-4 md:px-6 py-4">
       <div class="flex justify-between items-center">
@@ -23,12 +23,12 @@
         </div>
 
         <div class="hidden md:flex gap-8 lg:gap-10 text-base lg:text-lg font-medium text-dark">
-          <a href="#home" class="nav-link hover:text-[#166534] transition">Início</a>
-          <a href="#sobre" class="nav-link hover:text-[#166534] transition">Sobre</a>
-          <a href="#atividades" class="nav-link hover:text-[#166534] transition">Atividades</a>
-          <a href="#convidados" class="nav-link hover:text-[#166534] transition">Convidados</a>
-          <a href="#submissoes" class="nav-link hover:text-[#166534] transition">Submissões</a>
-          <a href="#contato" class="nav-link hover:text-[#166534] transition">Contato</a>
+          <a href="#home" class="hover:text-[#166534] transition">Início</a>
+          <a href="#sobre" class="hover:text-[#166534] transition">Sobre</a>
+          <a href="#atividades" class="hover:text-[#166534] transition">Atividades</a>
+          <a href="#convidados" class="hover:text-[#166534] transition">Convidados</a>
+          <a href="#submissoes" class="hover:text-[#166534] transition">Submissões</a>
+          <a href="#contato" class="hover:text-[#166534] transition">Contato</a>
         </div>
 
         <a href="https://cheers.com.br" target="_blank" class="btn-inscreva hidden md:block">
@@ -64,36 +64,21 @@
     </div>
   </header>
 
-  <!-- SOBRE -->
-  <section id="sobre" class="py-24 bg-white">
-    <div class="max-w-6xl mx-auto px-4">
-      <h2 class="text-4xl md:text-5xl font-bold title-font text-dark mb-10 text-center">Sobre a JONUB</h2>
-      <div class="text-gray-700 leading-relaxed text-base md:text-lg space-y-6">
+  <!-- SOBRE - Estilo como na imagem -->
+  <section id="sobre" class="py-20 md:py-28 bg-white">
+    <div class="max-w-4xl mx-auto px-4 text-center">
+      <h2 class="text-5xl md:text-6xl font-bold title-font text-dark mb-12">Sobre a JONUB</h2>
+      
+      <div class="text-gray-700 leading-relaxed text-lg md:text-xl space-y-8 text-left md:text-justify">
         <p>A Jornada de Nutrição da UNESP de Botucatu (JONUB), é um evento científico anual, organizado pelos discentes e docentes do curso de Nutrição da Unesp de Botucatu, que neste ano está em sua 24ª edição.</p>
+        
         <p>Será realizada nos dias <strong>08 a 10 de Outubro de 2026</strong>, no Espaço IB Eventos, no Instituto de Biociências de Botucatu, UNESP, campus de Botucatu/SP.</p>
+        
         <p>A Jornada visa enriquecer o conhecimento dos alunos desta e de outras Instituições de Ensino Superior (IES), contando com diversos temas relacionados a nutrição e atualizações na área.</p>
+        
+        <p>A Comissão Organizadora espera contar com a presença de 200 pessoas, entre convidados a proferir palestras e desenvolver mini-cursos, Demo-kitchens, alunos, profissionais, docentes e comunidade em geral, para acompanhar as discussões pertinentes a área da ciência da nutrição.</p>
       </div>
     </div>
-  </section>
-
-  <!-- ATIVIDADES -->
-  <section id="atividades" class="py-24 bg-creme text-center">
-    <h2 class="text-4xl md:text-5xl font-bold title-font text-dark mb-10">Atividades</h2>
-  </section>
-
-  <!-- CONVIDADOS -->
-  <section id="convidados" class="py-24 bg-white text-center">
-    <h2 class="text-4xl md:text-5xl font-bold title-font text-dark mb-10">Convidados</h2>
-  </section>
-
-  <!-- SUBMISSÕES -->
-  <section id="submissoes" class="py-24 bg-creme text-center">
-    <h2 class="text-4xl md:text-5xl font-bold title-font text-dark mb-10">Submissões</h2>
-  </section>
-
-  <!-- CONTATO -->
-  <section id="contato" class="py-24 bg-white text-center">
-    <h2 class="text-4xl md:text-5xl font-bold title-font text-dark mb-10">Contato</h2>
   </section>
 
   <!-- INSCRIÇÕES -->
@@ -111,39 +96,18 @@
     <p class="text-dark text-xl">© 2026 JONUB - Jornada de Nutrição da UNESP de Botucatu</p>
   </footer>
 
-  <!-- Script - Scroll suave + centralizar + fechar menu -->
+  <!-- Script Menu Mobile -->
   <script>
     const menuBtn = document.getElementById('menu-btn');
     const mobileMenu = document.getElementById('mobile-menu');
 
-    // Abrir/Fechar menu hambúrguer
     menuBtn.addEventListener('click', () => {
       mobileMenu.classList.toggle('hidden');
     });
 
-    // Scroll suave + centralizar + fechar menu
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-      anchor.addEventListener('click', function(e) {
-        e.preventDefault();
-        
-        const targetId = this.getAttribute('href').substring(1);
-        const targetSection = document.getElementById(targetId);
-        
-        if (targetSection) {
-          const navHeight = 80; // altura aproximada da navbar
-          const elementPosition = targetSection.getBoundingClientRect().top;
-          const offsetPosition = elementPosition + window.scrollY - navHeight - 30;
-
-          window.scrollTo({
-            top: offsetPosition,
-            behavior: 'smooth'
-          });
-        }
-
-        // Fechar menu mobile
-        if (!this.classList.contains('btn-inscreva')) {
-          mobileMenu.classList.add('hidden');
-        }
+    document.querySelectorAll('.mobile-link').forEach(link => {
+      link.addEventListener('click', () => {
+        mobileMenu.classList.add('hidden');
       });
     });
   </script>
