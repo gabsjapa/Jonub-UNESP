@@ -16,83 +16,65 @@
                   url('https://via.placeholder.com/1920x1080/0a3d62/ffffff?text=JONUB+2026') center/cover no-repeat;
       background-attachment: fixed;
     }
-    .nav-link { position: relative; }
-    .nav-link:after {
-      content: ''; position: absolute; width: 0; height: 2px; bottom: -4px; left: 0;
-      background-color: #f59e0b; transition: width 0.3s ease;
-    }
-    .nav-link:hover:after { width: 100%; }
   </style>
 </head>
 <body class="bg-gray-50">
 
-  <!-- Menu -->
+  <!-- Menu Superior com Logo -->
   <nav class="bg-[#0a3d62] text-white sticky top-0 z-50 shadow-lg">
-    <div class="max-w-7xl mx-auto px-6 py-5 flex justify-between items-center">
-      <h2 class="text-3xl font-bold title-font">JONUB 2026</h2>
-      <div class="hidden md:flex gap-8 text-lg font-medium">
-        <a href="#home" class="nav-link">Início</a>
-        <a href="#historia" class="nav-link">História</a>
-        <a href="#programacao" class="nav-link">Programação</a>
-        <a href="#palestrantes" class="nav-link">Palestrantes</a>
-        <a href="#inscricoes" class="nav-link">Inscrições</a>
+    <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+      <div class="flex items-center gap-4">
+        <img src="https://via.placeholder.com/180x80/0a3d62/ffffff?text=JONUB+LOGO" 
+             alt="Logo JONUB" class="h-14">
+        <div>
+          <h2 class="text-3xl font-bold title-font">JONUB 2026</h2>
+          <p class="text-xs text-blue-200 -mt-1">Jornada de Nutrição da UNESP Botucatu</p>
+        </div>
       </div>
+      
+      <div class="hidden md:flex gap-8 text-lg font-medium">
+        <a href="#home" class="hover:text-yellow-400 transition">Início</a>
+        <a href="#historia" class="hover:text-yellow-400 transition">História</a>
+        <a href="#programacao" class="hover:text-yellow-400 transition">Programação</a>
+        <a href="#palestrantes" class="hover:text-yellow-400 transition">Palestrantes</a>
+        <a href="#inscricoes" class="hover:text-yellow-400 transition">Inscrições</a>
+      </div>
+      
       <a href="#inscricoes" class="bg-white text-[#0a3d62] font-bold px-8 py-3.5 rounded-xl hover:bg-yellow-400 transition">
         Inscreva-se
       </a>
     </div>
   </nav>
 
-  <!-- Hero -->
+  <!-- Hero com Logo -->
   <header id="home" class="hero text-white py-40 text-center">
     <div class="max-w-6xl mx-auto px-6">
+      <img src="https://via.placeholder.com/280x120/0a3d62/ffffff?text=JONUB+LOGO" 
+           alt="Logo JONUB" class="mx-auto mb-8 opacity-90">
       <h1 class="text-6xl md:text-7xl font-bold title-font mb-6">JONUB 2026</h1>
       <p class="text-3xl mb-4">Jornada de Nutrição da UNESP de Botucatu</p>
-      <p class="text-2xl">08 a 10 de Outubro de 2026 • Botucatu, SP</p>
+      <p class="text-2xl mb-12">08 a 10 de Outubro de 2026 • Botucatu, SP</p>
     </div>
   </header>
 
-  <!-- História da JONUB -->
+  <!-- História (mantida) -->
   <section id="historia" class="py-24 bg-white">
     <div class="max-w-6xl mx-auto px-6">
       <h2 class="text-5xl font-bold title-font text-center text-[#0a3d62] mb-16">Nossa História</h2>
-      
       <div class="grid md:grid-cols-3 gap-10">
-        <div class="bg-gray-50 p-8 rounded-2xl">
-          <h3 class="text-2xl font-semibold mb-4 text-[#0a3d62]">2001 - O Início</h3>
-          <p class="text-gray-600 leading-relaxed">
-            Um grupo de discentes do curso de Nutrição da Unesp Botucatu idealizou e realizou 
-            a primeira edição da JONUB.
-          </p>
+        <div class="bg-gray-50 p-8 rounded-2xl text-center">
+          <h3 class="text-2xl font-semibold mb-4 text-[#0a3d62]">2001</h3>
+          <p class="text-gray-600">Um grupo de discentes idealizou e realizou a primeira edição da JONUB.</p>
         </div>
-
-        <div class="bg-gray-50 p-8 rounded-2xl">
+        <div class="bg-gray-50 p-8 rounded-2xl text-center">
           <h3 class="text-2xl font-semibold mb-4 text-[#0a3d62]">Feita por Alunos</h3>
-          <p class="text-gray-600 leading-relaxed">
-            A JONUB é um evento <strong>inteiramente feito por alunos</strong> do curso de Nutrição 
-            para outros alunos e profissionais da área.
-          </p>
+          <p class="text-gray-600">Evento inteiramente organizado por alunos para alunos e profissionais.</p>
         </div>
-
-        <div class="bg-gray-50 p-8 rounded-2xl">
-          <h3 class="text-2xl font-semibold mb-4 text-[#0a3d62]">Pioneirismo</h3>
-          <p class="text-gray-600 leading-relaxed">
-            Foi o primeiro evento do curso de Nutrição da UNESP a trazer nutricionistas de outras 
-            regiões para debaterem seus estudos e ministrarem palestras.
-          </p>
+        <div class="bg-gray-50 p-8 rounded-2xl text-center">
+          <h3 class="text-2xl font-semibold mb-4 text-[#0a3d62]">Pioneira</h3>
+          <p class="text-gray-600">Primeiro evento da UNESP a trazer nutricionistas de outras regiões.</p>
         </div>
       </div>
-    </div>
-  </section>
-
-  <!-- Inscrições -->
-  <section id="inscricoes" class="py-24 bg-[#0a3d62] text-white text-center">
-    <div class="max-w-4xl mx-auto px-6">
-      <h2 class="text-5xl font-bold title-font mb-6">Participe da JONUB 2026</h2>
-      <p class="text-2xl mb-10">Garanta sua vaga no maior evento estudantil de Nutrição da região!</p>
-      <a href="#" class="inline-block bg-white text-[#0a3d62] font-bold text-2xl px-16 py-7 rounded-3xl hover:bg-yellow-400 transition">
-        Realizar Inscrição
-      </a>
     </div>
   </section>
 
