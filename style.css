@@ -8,23 +8,25 @@ body {
   font-family: 'Playfair Display', sans-serif;
 }
 
-/* Cores Principais */
+/* Cores */
 .bg-creme { background-color: #f8f4eb; }
 .text-dark { color: #1e3a2f; }
 
-/* Botões com borda - Verde Escuro */
+/* Botão com borda forte - Verde Escuro */
 .btn-inscreva {
-  background-color: transparent;
-  color: #166534;
-  border: 3px solid #166534;
-  font-weight: bold;
-  transition: all 0.3s ease;
-  padding: 12px 32px;
+  background-color: transparent !important;
+  color: #166534 !important;
+  border: 4px solid #166534 !important;
+  font-weight: 700;
+  padding: 14px 32px;
   border-radius: 12px;
+  font-size: 1.1rem;
+  transition: all 0.3s ease;
+  text-decoration: none;
 }
 
 .btn-inscreva:hover {
-  background-color: #166534;
-  color: white;
-  transform: scale(1.05);
+  background-color: #166534 !important;
+  color: white !important;
+  transform: translateY(-3px);
 }
