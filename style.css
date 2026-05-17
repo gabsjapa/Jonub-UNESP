@@ -12,9 +12,3 @@ body {
 .bg-creme { background-color: #f8f4eb; }
 .text-dark { color: #1e3a2f; }
 .accent { color: #d97706; }
-
-/* Navegação */
-nav {
-  background-color: #f8f4eb;
-  border-bottom: 1px solid #e8d9c0;
-}
