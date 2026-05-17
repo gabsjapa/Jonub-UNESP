@@ -12,24 +12,37 @@ body {
 .bg-creme { background-color: #f8f4eb; }
 .text-dark { color: #1e3a2f; }
 
-/* Botões com borda verde escuro - Forte */
+/* Botões estilo Hepato */
 .btn-inscreva {
-  display: inline-block;
-  background-color: transparent;
-  color: #166534;
-  border: 4px solid #166534;
+  background: linear-gradient(90deg, #f59e0b, #ea580c);
+  color: white;
   font-weight: 700;
-  padding: 16px 36px;
-  border-radius: 9999px;     /* Bordas bem arredondadas */
-  font-size: 1.15rem;
+  padding: 14px 32px;
+  border-radius: 50px;
   text-decoration: none;
   transition: all 0.3s ease;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 15px rgba(245, 158, 11, 0.4);
+  display: inline-block;
 }
 
 .btn-inscreva:hover {
-  background-color: #166534;
-  color: white;
   transform: translateY(-4px);
-  box-shadow: 0 10px 15px rgba(22, 101, 52, 0.3);
+  box-shadow: 0 8px 20px rgba(245, 158, 11, 0.5);
+}
+
+/* Botão secundário (ex: Patrocínio) */
+.btn-secundario {
+  background: linear-gradient(90deg, #0ea5e9, #0284c8);
+  color: white;
+  font-weight: 700;
+  padding: 14px 32px;
+  border-radius: 50px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  display: inline-block;
+}
+
+.btn-secundario:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(14, 165, 233, 0.5);
 }
