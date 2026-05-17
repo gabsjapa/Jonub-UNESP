@@ -1,0 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@700&display=swap');
+
+body {
+  font-family: 'Inter', system_ui, sans-serif;
+}
+
+.title-font {
+  font-family: 'Playfair Display', sans-serif;
+}
+
+/* Cores Creme */
+.bg-creme { background-color: #f8f4eb; }
+.text-dark { color: #1e3a2f; }
+.accent { color: #d97706; }
+
+/* Navegação */
+nav {
+  background-color: #f8f4eb;
+  border-bottom: 1px solid #e8d9c0;
+}
