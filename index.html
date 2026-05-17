@@ -14,7 +14,6 @@
   <nav class="bg-creme border-b border-[#e8d9c0] sticky top-0 z-50 shadow-sm">
     <div class="max-w-7xl mx-auto px-4 md:px-6 py-4">
       <div class="flex justify-between items-center">
-        <!-- Logo -->
         <div class="flex items-center gap-3">
           <img src="https://i.imgur.com/NLf5u6p.png" alt="Logo JONUB" class="h-12 md:h-16">
           <div>
@@ -31,7 +30,6 @@
           <a href="#inscricoes" class="hover:text-[#166534] transition">Inscrições</a>
         </div>
 
-        <!-- Botão Desktop -->
         <a href="https://cheers.com.br" target="_blank" class="btn-inscreva hidden md:block">
           INSCREVA-SE
         </a>
@@ -45,10 +43,10 @@
       <!-- MENU MOBILE -->
       <div id="mobile-menu" class="hidden md:hidden mt-6 pt-6 border-t border-gray-200">
         <div class="flex flex-col gap-5 text-lg text-dark">
-          <a href="#home" class="mobile-link hover:text-[#166534] transition py-2">Início</a>
-          <a href="#sobre" class="mobile-link hover:text-[#166534] transition py-2">Sobre</a>
-          <a href="#programacao" class="mobile-link hover:text-[#166534] transition py-2">Programação</a>
-          <a href="#inscricoes" class="mobile-link hover:text-[#166534] transition py-2">Inscrições</a>
+          <a href="#home" class="mobile-link hover:text-[#166534] transition py-3">Início</a>
+          <a href="#sobre" class="mobile-link hover:text-[#166534] transition py-3">Sobre</a>
+          <a href="#programacao" class="mobile-link hover:text-[#166534] transition py-3">Programação</a>
+          <a href="#inscricoes" class="mobile-link hover:text-[#166534] transition py-3">Inscrições</a>
           
           <a href="https://cheers.com.br" target="_blank" class="btn-inscreva text-center mt-4">
             INSCREVA-SE
@@ -58,26 +56,22 @@
     </div>
   </nav>
 
-  <!-- BANNER -->
+  <!-- Restante do site -->
   <header id="home" class="bg-creme py-10 md:py-20 text-center">
     <div class="max-w-6xl mx-auto px-4">
       <img src="https://i.imgur.com/gqKiqUo.png" alt="JONUB 2026" class="mx-auto w-full max-w-4xl">
     </div>
   </header>
 
-  <!-- SOBRE -->
   <section id="sobre" class="py-20 bg-white">
     <div class="max-w-6xl mx-auto px-4">
       <h2 class="text-4xl md:text-5xl font-bold title-font text-dark mb-10 text-center">Sobre a JONUB</h2>
       <div class="prose prose-lg text-gray-700 leading-relaxed">
-        <p>A Jornada de Nutrição da UNESP de Botucatu (JONUB), é um evento científico anual, organizado pelos discentes e docentes do curso de Nutrição da Unesp de Botucatu, que neste ano está em sua 24ª edição.</p>
-        <p>Será realizada nos dias <strong>08 a 10 de Outubro de 2026</strong>, no Espaço IB Eventos, no Instituto de Biociências de Botucatu, UNESP, campus de Botucatu/SP.</p>
-        <p>A Jornada visa enriquecer o conhecimento dos alunos desta e de outras Instituições de Ensino Superior (IES), contando com diversos temas relacionados a nutrição e atualizações na área.</p>
+        <p>A Jornada de Nutrição da UNESP de Botucatu (JONUB), é um evento científico anual...</p>
       </div>
     </div>
   </section>
 
-  <!-- INSCRIÇÕES -->
   <section id="inscricoes" class="py-20 bg-creme text-center">
     <div class="max-w-4xl mx-auto px-4">
       <h2 class="text-4xl font-bold mb-8 text-dark">Inscreva-se no JONUB 2026</h2>
@@ -87,30 +81,28 @@
     </div>
   </section>
 
-  <!-- RODAPÉ -->
   <footer class="bg-creme border-t border-[#e8d9c0] py-12 text-center">
     <p class="text-dark text-xl">© 2026 JONUB - Jornada de Nutrição da UNESP de Botucatu</p>
   </footer>
 
-  <!-- Script Menu Mobile -->
+  <!-- SCRIPT DO MENU MOBILE (Melhorado) -->
   <script>
     const menuBtn = document.getElementById('menu-btn');
     const mobileMenu = document.getElementById('mobile-menu');
-    const mobileLinks = document.querySelectorAll('.mobile-link');
 
-    // Abrir / Fechar menu
+    // Abrir/Fechar menu
     menuBtn.addEventListener('click', () => {
       mobileMenu.classList.toggle('hidden');
     });
 
-    // Fechar menu ao clicar em qualquer link
-    mobileLinks.forEach(link => {
+    // Fechar ao clicar em qualquer link
+    document.querySelectorAll('.mobile-link').forEach(link => {
       link.addEventListener('click', () => {
         mobileMenu.classList.add('hidden');
       });
     });
 
-    // Fechar menu ao clicar no botão de inscrição também
+    // Fechar ao clicar no botão de inscrição
     document.querySelectorAll('.btn-inscreva').forEach(btn => {
       btn.addEventListener('click', () => {
         mobileMenu.classList.add('hidden');
