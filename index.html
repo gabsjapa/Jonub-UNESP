@@ -11,11 +11,7 @@
     @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@700&display=swap');
     body { font-family: 'Inter', system_ui, sans-serif; }
     .title-font { font-family: 'Playfair Display', sans-serif; }
-    .hero {
-      background: linear-gradient(rgba(10, 61, 98, 0.85), rgba(10, 61, 98, 0.85));
-      background-size: cover;
-      background-position: center;
-    }
+    .hero { background: linear-gradient(rgba(10, 61, 98, 0.9), rgba(10, 61, 98, 0.9)); }
   </style>
 </head>
 <body class="bg-gray-50">
@@ -45,19 +41,32 @@
     </div>
   </nav>
 
-  <!-- CABEÇALHO / BANNER -->
-  <header id="home" class="hero text-white py-20 md:py-32 text-center">
+  <!-- BANNER PRINCIPAL -->
+  <header id="home" class="hero text-white py-12 md:py-20 text-center">
     <div class="max-w-6xl mx-auto px-6">
       <img src="https://i.imgur.com/gqKiqUo.png" 
-           alt="JONUB 2026" class="mx-auto mb-8 w-full max-w-4xl">
+           alt="JONUB 2026" class="mx-auto w-full max-w-5xl shadow-2xl rounded-lg">
     </div>
   </header>
 
-  <!-- Resto do site (História) -->
+  <!-- HISTÓRIA -->
   <section id="historia" class="py-24 bg-white">
-    <div class="max-w-6xl mx-auto px-6">
-      <h2 class="text-5xl font-bold title-font text-center text-[#0a3d62] mb-16">Nossa História</h2>
-      <!-- (mantenho a seção que já tínhamos) -->
+    <div class="max-w-6xl mx-auto px-6 text-center">
+      <h2 class="text-5xl font-bold title-font text-[#0a3d62] mb-16">Nossa História</h2>
+      <div class="grid md:grid-cols-3 gap-10">
+        <div class="bg-gray-50 p-8 rounded-2xl">
+          <h3 class="text-2xl font-semibold mb-4 text-[#0a3d62]">2001</h3>
+          <p class="text-gray-600">Um grupo de discentes idealizou e realizou a primeira edição da JONUB.</p>
+        </div>
+        <div class="bg-gray-50 p-8 rounded-2xl">
+          <h3 class="text-2xl font-semibold mb-4 text-[#0a3d62]">Feita por Alunos</h3>
+          <p class="text-gray-600">Evento inteiramente organizado por alunos para alunos e profissionais.</p>
+        </div>
+        <div class="bg-gray-50 p-8 rounded-2xl">
+          <h3 class="text-2xl font-semibold mb-4 text-[#0a3d62]">Pioneira</h3>
+          <p class="text-gray-600">Primeiro evento da UNESP a trazer nutricionistas de outras regiões.</p>
+        </div>
+      </div>
     </div>
   </section>
 
