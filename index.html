@@ -22,8 +22,8 @@
           </div>
         </div>
 
-        <!-- Menu Desktop -->
-        <div class="hidden md:flex gap-5 lg:gap-7 text-base lg:text-lg font-medium text-dark">
+        <!-- Menu Desktop - COM MAIS ESPAÇO -->
+        <div class="hidden md:flex gap-8 lg:gap-10 text-base lg:text-lg font-medium text-dark">
           <a href="#home" class="hover:text-[#166534] transition">Início</a>
           <a href="#sobre" class="hover:text-[#166534] transition">Sobre</a>
           <a href="#atividades" class="hover:text-[#166534] transition">Atividades</a>
@@ -42,7 +42,7 @@
         </button>
       </div>
 
-      <!-- MENU MOBILE -->
+      <!-- Menu Mobile -->
       <div id="mobile-menu" class="hidden md:hidden mt-6 pt-6 border-t border-gray-200">
         <div class="flex flex-col gap-5 text-lg text-dark">
           <a href="#home" class="mobile-link hover:text-[#166534] transition py-3">Início</a>
@@ -60,95 +60,8 @@
     </div>
   </nav>
 
-  <!-- BANNER -->
-  <header id="home" class="bg-creme py-10 md:py-20 text-center">
-    <div class="max-w-6xl mx-auto px-4">
-      <img src="https://i.imgur.com/gqKiqUo.png" alt="JONUB 2026" class="mx-auto w-full max-w-4xl">
-    </div>
-  </header>
-
-  <!-- SOBRE -->
-  <section id="sobre" class="py-20 bg-white">
-    <div class="max-w-6xl mx-auto px-4">
-      <h2 class="text-4xl md:text-5xl font-bold title-font text-dark mb-10 text-center">Sobre a JONUB</h2>
-      <div class="text-gray-700 leading-relaxed text-base md:text-lg space-y-6">
-        <p>A Jornada de Nutrição da UNESP de Botucatu (JONUB), é um evento científico anual, organizado pelos discentes e docentes do curso de Nutrição da Unesp de Botucatu, que neste ano está em sua 24ª edição.</p>
-        <p>Será realizada nos dias <strong>08 a 10 de Outubro de 2026</strong>, no Espaço IB Eventos, no Instituto de Biociências de Botucatu, UNESP, campus de Botucatu/SP.</p>
-        <p>A Jornada visa enriquecer o conhecimento dos alunos desta e de outras Instituições de Ensino Superior (IES), contando com diversos temas relacionados a nutrição e atualizações na área.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- ATIVIDADES -->
-  <section id="atividades" class="py-20 bg-creme">
-    <div class="max-w-6xl mx-auto px-4 text-center">
-      <h2 class="text-4xl md:text-5xl font-bold title-font text-dark mb-10">Atividades</h2>
-      <p class="text-gray-600 text-lg">Palestras, mini-cursos, mesas-redondas, Demo-kitchens e muito mais.</p>
-    </div>
-  </section>
-
-  <!-- CONVIDADOS -->
-  <section id="convidados" class="py-20 bg-white">
-    <div class="max-w-6xl mx-auto px-4 text-center">
-      <h2 class="text-4xl md:text-5xl font-bold title-font text-dark mb-10">Convidados</h2>
-      <p class="text-gray-600 text-lg">Em breve divulgaremos a lista de palestrantes e convidados especiais.</p>
-    </div>
-  </section>
-
-  <!-- SUBMISSÕES -->
-  <section id="submissoes" class="py-20 bg-creme">
-    <div class="max-w-6xl mx-auto px-4 text-center">
-      <h2 class="text-4xl md:text-5xl font-bold title-font text-dark mb-10">Submissões</h2>
-      <p class="text-gray-600 text-lg">Envie seu trabalho científico! Prazos e regras em breve.</p>
-    </div>
-  </section>
-
-  <!-- MODELOS -->
-  <section id="modelos" class="py-20 bg-white">
-    <div class="max-w-6xl mx-auto px-4 text-center">
-      <h2 class="text-4xl md:text-5xl font-bold title-font text-dark mb-10">Modelos para Submissões</h2>
-      <p class="text-gray-600 text-lg">Baixe os templates oficiais para envio de resumos e trabalhos.</p>
-    </div>
-  </section>
-
-  <!-- CONTATO -->
-  <section id="contato" class="py-20 bg-creme">
-    <div class="max-w-6xl mx-auto px-4 text-center">
-      <h2 class="text-4xl md:text-5xl font-bold title-font text-dark mb-10">Contato</h2>
-      <p class="text-gray-600 text-lg">Em breve disponibilizaremos e-mail e telefone da comissão organizadora.</p>
-    </div>
-  </section>
-
-  <!-- INSCRIÇÕES -->
-  <section id="inscricoes" class="py-20 bg-white text-center">
-    <div class="max-w-4xl mx-auto px-4">
-      <h2 class="text-4xl font-bold mb-8 text-dark">Inscreva-se no JONUB 2026</h2>
-      <a href="https://cheers.com.br" target="_blank" class="btn-inscreva text-xl">
-        Realizar Inscrição
-      </a>
-    </div>
-  </section>
-
-  <!-- RODAPÉ -->
-  <footer class="bg-creme border-t border-[#e8d9c0] py-12 text-center">
-    <p class="text-dark text-xl">© 2026 JONUB - Jornada de Nutrição da UNESP de Botucatu</p>
-  </footer>
-
-  <!-- Script Menu Mobile -->
-  <script>
-    const menuBtn = document.getElementById('menu-btn');
-    const mobileMenu = document.getElementById('mobile-menu');
-
-    menuBtn.addEventListener('click', () => {
-      mobileMenu.classList.toggle('hidden');
-    });
-
-    document.querySelectorAll('.mobile-link').forEach(link => {
-      link.addEventListener('click', () => {
-        mobileMenu.classList.add('hidden');
-      });
-    });
-  </script>
+  <!-- O resto do site continua igual (Banner, Sobre, Atividades, etc.) -->
+  <!-- ... (mantenha o resto do código que você já tem) ... -->
 
 </body>
 </html>
