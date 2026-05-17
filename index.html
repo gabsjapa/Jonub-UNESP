@@ -6,81 +6,131 @@
   <title>JONUB 2026 - Jornada de Nutrição da UNESP de Botucatu</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+  
   <style>
-    body { font-family: 'Inter', system-ui, sans-serif; }
-    .hero { 
-      background: linear-gradient(rgba(10, 61, 98, 0.85), rgba(10, 61, 98, 0.85)), 
-                  url('https://via.placeholder.com/1920x900/0a3d62/ffffff?text=JONUB+2026') center/cover no-repeat; 
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@700&display=swap');
+
+    body {
+      font-family: 'Inter', system_ui, sans-serif;
     }
-    .nav-link { transition: all 0.3s; }
-    .nav-link:hover { color: #f59e0b; }
+    
+    .title-font {
+      font-family: 'Playfair Display', sans-serif;
+    }
+
+    .hero {
+      background: linear-gradient(rgba(10, 61, 98, 0.88), rgba(10, 61, 98, 0.88)), 
+                  url('https://via.placeholder.com/1920x1080/0a3d62/ffffff?text=JONUB+2026') center/cover no-repeat;
+      background-attachment: fixed;
+    }
+
+    .nav-link {
+      position: relative;
+      transition: all 0.3s ease;
+    }
+    
+    .nav-link:after {
+      content: '';
+      position: absolute;
+      width: 0;
+      height: 2px;
+      bottom: -4px;
+      left: 0;
+      background-color: #f59e0b;
+      transition: width 0.3s ease;
+    }
+    
+    .nav-link:hover:after {
+      width: 100%;
+    }
+
+    .card-hover {
+      transition: all 0.4s ease;
+    }
+    
+    .card-hover:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+    }
+
+    .btn-primary {
+      transition: all 0.3s ease;
+    }
+    
+    .btn-primary:hover {
+      background-color: #f59e0b;
+      transform: scale(1.05);
+    }
   </style>
 </head>
-<body class="bg-gray-50 text-gray-800">
+<body class="bg-gray-50">
 
-  <!-- Menu Superior (estilo Hepato) -->
-  <nav class="bg-[#0a3d62] text-white sticky top-0 z-50 shadow-md">
-    <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+  <!-- Menu Superior -->
+  <nav class="bg-[#0a3d62] text-white sticky top-0 z-50 shadow-lg">
+    <div class="max-w-7xl mx-auto px-6 py-5 flex justify-between items-center">
       <div class="flex items-center gap-3">
-        <h2 class="text-2xl font-bold">JONUB 2026</h2>
+        <h2 class="text-3xl font-bold title-font">JONUB 2026</h2>
       </div>
-      <div class="hidden md:flex gap-8 text-lg">
-        <a href="#home" class="nav-link">Home</a>
+      <div class="hidden md:flex gap-8 text-lg font-medium">
+        <a href="#home" class="nav-link">Início</a>
         <a href="#sobre" class="nav-link">Sobre</a>
         <a href="#programacao" class="nav-link">Programação</a>
         <a href="#palestrantes" class="nav-link">Palestrantes</a>
         <a href="#inscricoes" class="nav-link">Inscrições</a>
         <a href="#local" class="nav-link">Local</a>
       </div>
-      <a href="#inscricoes" class="bg-white text-[#0a3d62] font-bold px-8 py-3 rounded-lg hover:bg-yellow-400 transition">
+      <a href="#inscricoes" class="bg-white text-[#0a3d62] font-bold px-8 py-3.5 rounded-xl btn-primary text-lg shadow-md">
         Inscreva-se
       </a>
     </div>
   </nav>
 
-  <!-- Hero Section (igual estilo Hepato) -->
-  <header id="home" class="hero text-white py-32 text-center">
-    <div class="max-w-5xl mx-auto px-6">
-      <h1 class="text-6xl md:text-7xl font-bold mb-6">JONUB 2026</h1>
-      <p class="text-3xl mb-4">Jornada de Nutrição da UNESP de Botucatu</p>
-      <p class="text-2xl mb-10">08 a 10 de Outubro de 2026 • Botucatu, SP</p>
+  <!-- Hero -->
+  <header id="home" class="hero text-white py-40 text-center">
+    <div class="max-w-6xl mx-auto px-6">
+      <h1 class="text-6xl md:text-7xl font-bold title-font mb-6 tracking-tight">JONUB 2026</h1>
+      <p class="text-3xl md:text-4xl font-medium mb-4">Jornada de Nutrição da UNESP de Botucatu</p>
+      <p class="text-2xl mb-12">08 a 10 de Outubro de 2026 • Botucatu, SP</p>
       
       <div class="flex flex-col sm:flex-row gap-6 justify-center">
-        <a href="#inscricoes" class="bg-white text-[#0a3d62] font-bold text-xl px-12 py-5 rounded-xl hover:bg-yellow-400 transition shadow-xl">
+        <a href="#inscricoes" class="bg-white text-[#0a3d62] font-bold text-xl px-14 py-6 rounded-2xl btn-primary shadow-2xl text-lg">
           Inscreva-se Agora
         </a>
-        <a href="#programacao" class="border-2 border-white text-white font-bold text-xl px-12 py-5 rounded-xl hover:bg-white/10 transition">
+        <a href="#programacao" class="border-2 border-white text-white font-bold text-xl px-14 py-6 rounded-2xl hover:bg-white hover:text-[#0a3d62] transition">
           Ver Programação
         </a>
       </div>
     </div>
   </header>
 
-  <!-- Seção Sobre -->
-  <section id="sobre" class="py-20 bg-white">
-    <div class="max-w-5xl mx-auto px-6 text-center">
-      <h2 class="text-4xl font-bold mb-8">Bem-vindo ao JONUB 2026</h2>
-      <p class="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-        A Jornada de Nutrição da UNESP de Botucatu é um evento tradicional que reúne profissionais, estudantes e pesquisadores 
-        para atualização científica, debates e networking na área de Nutrição.
+  <!-- Sobre -->
+  <section id="sobre" class="py-24 bg-white">
+    <div class="max-w-6xl mx-auto px-6 text-center">
+      <h2 class="text-5xl font-bold title-font text-[#0a3d62] mb-10">Bem-vindo ao JONUB 2026</h2>
+      <p class="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
+        A Jornada de Nutrição da UNESP de Botucatu é um dos principais eventos científicos da área de Nutrição do interior paulista, 
+        reunindo profissionais, pesquisadores, estudantes e professores em três dias de intensa atualização e troca de experiências.
       </p>
     </div>
   </section>
 
-  <!-- Outras seções (vou adicionando conforme você pedir) -->
-  <section id="inscricoes" class="py-20 bg-[#0a3d62] text-white">
-    <div class="max-w-5xl mx-auto px-6 text-center">
-      <h2 class="text-4xl font-bold mb-8">Inscrições</h2>
-      <p class="text-2xl mb-10">Em breve abriremos as inscrições!</p>
-      <a href="#" class="bg-white text-[#0a3d62] font-bold text-xl px-16 py-6 rounded-2xl hover:bg-yellow-400 transition text-lg">
-        Quero me inscrever
+  <!-- Inscrições em destaque -->
+  <section id="inscricoes" class="py-24 bg-[#0a3d62] text-white">
+    <div class="max-w-6xl mx-auto px-6 text-center">
+      <h2 class="text-5xl font-bold title-font mb-8">Inscrições Abertas</h2>
+      <p class="text-2xl mb-12">Garanta sua vaga no maior evento de Nutrição da região!</p>
+      <a href="#" class="inline-block bg-white text-[#0a3d62] font-bold text-2xl px-16 py-7 rounded-3xl btn-primary shadow-2xl">
+        Realizar Inscrição
       </a>
     </div>
   </section>
 
-  <footer class="bg-gray-900 text-white py-12 text-center">
-    <p class="text-xl">JONUB 2026 • Jornada de Nutrição da UNESP de Botucatu</p>
-    <p class="mt-4">© 2026 - Todos os direitos reservados</p>
+  <footer class="bg-gray-900 text-white py-16 text-center">
+    <div class="max-w-6xl mx-auto px-6">
+      <h3 class="text-3xl font-bold title-font mb-4">JONUB 2026</h3>
+      <p class="text-lg">Jornada de Nutrição da UNESP de Botucatu</p>
+      <p class="mt-8 text-sm opacity-70">© 2026 - Todos os direitos reservados</p>
+    </div>
   </footer>
 
 </body>
