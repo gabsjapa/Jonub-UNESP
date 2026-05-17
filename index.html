@@ -15,32 +15,33 @@
 </head>
 <body class="bg-[#f8f1e9]">
 
-  <!-- NAVEGAÇÃO - Mesma cor do Hepato -->
-  <nav class="bg-[#0a3d62] text-white sticky top-0 z-50 shadow-lg">
+  <!-- NAVEGAÇÃO - Creme -->
+  <nav class="bg-[#f8f1e9] border-b border-gray-200 sticky top-0 z-50 shadow-sm">
     <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
       <div class="flex items-center gap-4">
-        <img src="https://i.imgur.com/NLf5u6p.png" alt="Logo JONUB" class="h-14 md:h-16">
+        <img src="https://i.imgur.com/NLf5u6p.png" 
+             alt="Logo JONUB" class="h-14 md:h-16">
         <div>
-          <h2 class="text-3xl font-bold title-font">JONUB 2026</h2>
-          <p class="text-xs text-blue-200">Jornada de Nutrição da UNESP Botucatu</p>
+          <h2 class="text-3xl font-bold title-font text-[#0a3d62]">JONUB 2026</h2>
+          <p class="text-xs text-gray-600">Jornada de Nutrição da UNESP Botucatu</p>
         </div>
       </div>
       
-      <div class="hidden md:flex gap-8 text-lg font-medium">
-        <a href="#home" class="hover:text-[#f59e0b] transition">Início</a>
-        <a href="#historia" class="hover:text-[#f59e0b] transition">História</a>
-        <a href="#programacao" class="hover:text-[#f59e0b] transition">Programação</a>
-        <a href="#inscricoes" class="hover:text-[#f59e0b] transition">Inscrições</a>
+      <div class="hidden md:flex gap-8 text-lg font-medium text-gray-700">
+        <a href="#home" class="hover:text-[#0a3d62] transition">Início</a>
+        <a href="#historia" class="hover:text-[#0a3d62] transition">História</a>
+        <a href="#programacao" class="hover:text-[#0a3d62] transition">Programação</a>
+        <a href="#inscricoes" class="hover:text-[#0a3d62] transition">Inscrições</a>
       </div>
       
-      <a href="#inscricoes" class="bg-[#f59e0b] text-[#0a3d62] font-bold px-8 py-3 rounded-xl hover:bg-white hover:text-[#0a3d62] transition">
+      <a href="#inscricoes" class="bg-[#f59e0b] text-white font-bold px-8 py-3 rounded-xl hover:bg-[#d97706] transition">
         Inscreva-se
       </a>
     </div>
   </nav>
 
   <!-- BANNER -->
-  <header id="home" class="bg-gradient-to-br from-[#0a3d62] to-[#1e5a8a] text-white py-12 md:py-20 text-center">
+  <header id="home" class="bg-gradient-to-br from-[#f8f1e9] to-[#f0e6d9] py-12 md:py-20 text-center">
     <div class="max-w-6xl mx-auto px-6">
       <img src="https://i.imgur.com/gqKiqUo.png" 
            alt="JONUB 2026" class="mx-auto w-full max-w-5xl">
@@ -51,15 +52,28 @@
   <section id="historia" class="py-24 bg-white">
     <div class="max-w-6xl mx-auto px-6 text-center">
       <h2 class="text-5xl font-bold title-font text-[#0a3d62] mb-16">Nossa História</h2>
-      <!-- suas cards aqui -->
+      <div class="grid md:grid-cols-3 gap-10">
+        <div class="bg-[#f8f1e9] p-8 rounded-2xl">
+          <h3 class="text-2xl font-semibold mb-4 text-[#0a3d62]">2001</h3>
+          <p class="text-gray-600">Um grupo de discentes idealizou e realizou a primeira edição da JONUB.</p>
+        </div>
+        <div class="bg-[#f8f1e9] p-8 rounded-2xl">
+          <h3 class="text-2xl font-semibold mb-4 text-[#0a3d62]">Feita por Alunos</h3>
+          <p class="text-gray-600">Evento inteiramente organizado por alunos para alunos e profissionais.</p>
+        </div>
+        <div class="bg-[#f8f1e9] p-8 rounded-2xl">
+          <h3 class="text-2xl font-semibold mb-4 text-[#0a3d62]">Pioneira</h3>
+          <p class="text-gray-600">Primeiro evento da UNESP a trazer nutricionistas de outras regiões.</p>
+        </div>
+      </div>
     </div>
   </section>
 
   <!-- Inscrições -->
-  <section id="inscricoes" class="py-20 bg-[#0a3d62] text-white text-center">
+  <section id="inscricoes" class="py-20 bg-[#f8f1e9] text-center">
     <div class="max-w-4xl mx-auto px-6">
-      <h2 class="text-4xl font-bold mb-6">Inscreva-se no JONUB 2026</h2>
-      <a href="#" class="inline-block bg-[#f59e0b] text-[#0a3d62] font-bold text-xl px-12 py-5 rounded-xl hover:bg-white transition">
+      <h2 class="text-4xl font-bold mb-6 text-[#0a3d62]">Inscreva-se no JONUB 2026</h2>
+      <a href="#" class="inline-block bg-[#f59e0b] text-white font-bold text-xl px-12 py-5 rounded-xl hover:bg-[#d97706] transition">
         Realizar Inscrição
       </a>
     </div>
