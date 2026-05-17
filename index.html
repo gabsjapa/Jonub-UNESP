@@ -11,12 +11,11 @@
     @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@700&display=swap');
     body { font-family: 'Inter', system_ui, sans-serif; }
     .title-font { font-family: 'Playfair Display', sans-serif; }
-    .hero { background: linear-gradient(rgba(10, 61, 98, 0.9), rgba(10, 61, 98, 0.9)); }
   </style>
 </head>
 <body class="bg-gray-50">
 
-  <!-- NAVEGAÇÃO -->
+  <!-- NAVEGAÇÃO - Mesma cor do Hepato -->
   <nav class="bg-[#0a3d62] text-white sticky top-0 z-50 shadow-lg">
     <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
       <div class="flex items-center gap-4">
@@ -35,17 +34,17 @@
         <a href="#inscricoes" class="hover:text-yellow-400 transition">Inscrições</a>
       </div>
       
-      <a href="#inscricoes" class="bg-white text-[#0a3d62] font-bold px-8 py-3 rounded-xl hover:bg-yellow-400 transition">
+      <a href="#inscricoes" class="bg-white text-[#0a3d62] font-bold px-8 py-3 rounded-xl hover:bg-yellow-400 hover:text-[#0a3d62] transition">
         Inscreva-se
       </a>
     </div>
   </nav>
 
   <!-- BANNER PRINCIPAL -->
-  <header id="home" class="hero text-white py-12 md:py-20 text-center">
+  <header id="home" class="bg-[#0a3d62] text-white py-12 md:py-20 text-center">
     <div class="max-w-6xl mx-auto px-6">
       <img src="https://i.imgur.com/gqKiqUo.png" 
-           alt="JONUB 2026" class="mx-auto w-full max-w-5xl shadow-2xl rounded-lg">
+           alt="JONUB 2026" class="mx-auto w-full max-w-5xl">
     </div>
   </header>
 
@@ -70,7 +69,17 @@
     </div>
   </section>
 
-  <footer class="bg-gray-900 text-white py-12 text-center">
+  <!-- Botão de Inscrição em destaque -->
+  <section id="inscricoes" class="py-20 bg-[#0a3d62] text-white text-center">
+    <div class="max-w-4xl mx-auto px-6">
+      <h2 class="text-4xl font-bold mb-6">Inscreva-se no JONUB 2026</h2>
+      <a href="#" class="inline-block bg-white text-[#0a3d62] font-bold text-xl px-12 py-5 rounded-xl hover:bg-yellow-400 transition">
+        Realizar Inscrição
+      </a>
+    </div>
+  </section>
+
+  <footer class="bg-[#0a3d62] text-white py-12 text-center">
     <p class="text-xl">© 2026 JONUB - Jornada de Nutrição da UNESP de Botucatu</p>
   </footer>
 
