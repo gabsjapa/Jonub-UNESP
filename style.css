@@ -8,45 +8,20 @@ body {
   font-family: 'Playfair Display', sans-serif;
 }
 
-/* Cores Principais - Tema Creme */
-.bg-creme { 
-  background-color: #f8f4eb; 
-}
+/* Cores Principais */
+.bg-creme { background-color: #f8f4eb; }
+.text-dark { color: #1e3a2f; }
 
-.text-dark { 
-  color: #1e3a2f; 
-}
-
-.accent { 
-  color: #d97706; 
-}
-
-/* Estilos Gerais */
-nav {
-  background-color: #f8f4eb;
-  border-bottom: 1px solid #e8d9c0;
-}
-
-.hero-bg {
-  background-color: #f8f4eb;
-}
-
-.card {
+/* Botões em Verde Escuro */
+.btn-primary {
+  background-color: #166534;        /* Verde escuro */
+  color: white;
   transition: all 0.3s ease;
 }
 
-.card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1);
-}
-
-/* Botões */
-.btn-inscreva {
-  background-color: #d97706;
-  transition: all 0.3s ease;
-}
-
-.btn-inscreva:hover {
-  background-color: #b45309;
+.btn-primary:hover {
+  background-color: #14532d;        /* Verde mais escuro no hover */
   transform: scale(1.05);
 }
+
+.accent { color: #166534; }
