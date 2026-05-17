@@ -22,7 +22,6 @@
           </div>
         </div>
 
-        <!-- Menu Desktop -->
         <div class="hidden md:flex gap-6 lg:gap-8 text-base lg:text-lg font-medium text-dark">
           <a href="#home" class="hover:text-[#166534] transition">Início</a>
           <a href="#sobre" class="hover:text-[#166534] transition">Sobre</a>
@@ -34,7 +33,6 @@
           INSCREVA-SE
         </a>
 
-        <!-- Hambúrguer -->
         <button id="menu-btn" class="md:hidden text-3xl text-dark p-2">
           <i class="fas fa-bars"></i>
         </button>
@@ -47,7 +45,6 @@
           <a href="#sobre" class="mobile-link hover:text-[#166534] transition py-3">Sobre</a>
           <a href="#programacao" class="mobile-link hover:text-[#166534] transition py-3">Programação</a>
           <a href="#inscricoes" class="mobile-link hover:text-[#166534] transition py-3">Inscrições</a>
-          
           <a href="https://cheers.com.br" target="_blank" class="btn-inscreva text-center mt-4">
             INSCREVA-SE
           </a>
@@ -56,22 +53,28 @@
     </div>
   </nav>
 
-  <!-- Restante do site -->
+  <!-- BANNER -->
   <header id="home" class="bg-creme py-10 md:py-20 text-center">
     <div class="max-w-6xl mx-auto px-4">
       <img src="https://i.imgur.com/gqKiqUo.png" alt="JONUB 2026" class="mx-auto w-full max-w-4xl">
     </div>
   </header>
 
-  <section id="sobre" class="py-20 bg-white">
-    <div class="max-w-6xl mx-auto px-4">
+  <!-- SOBRE - Otimizado para celular -->
+  <section id="sobre" class="py-16 md:py-24 bg-white">
+    <div class="max-w-6xl mx-auto px-4 md:px-6">
       <h2 class="text-4xl md:text-5xl font-bold title-font text-dark mb-10 text-center">Sobre a JONUB</h2>
-      <div class="prose prose-lg text-gray-700 leading-relaxed">
-        <p>A Jornada de Nutrição da UNESP de Botucatu (JONUB), é um evento científico anual...</p>
+      
+      <div class="text-gray-700 leading-relaxed text-base md:text-lg space-y-6">
+        <p>A Jornada de Nutrição da UNESP de Botucatu (JONUB), é um evento científico anual, organizado pelos discentes e docentes do curso de Nutrição da Unesp de Botucatu, que neste ano está em sua 24ª edição.</p>
+        <p>Será realizada nos dias <strong>08 a 10 de Outubro de 2026</strong>, no Espaço IB Eventos, no Instituto de Biociências de Botucatu, UNESP, campus de Botucatu/SP.</p>
+        <p>A Jornada visa enriquecer o conhecimento dos alunos desta e de outras Instituições de Ensino Superior (IES), contando com diversos temas relacionados a nutrição e atualizações na área.</p>
+        <p>A Comissão Organizadora espera contar com a presença de 200 pessoas, entre convidados a proferir palestras e desenvolver mini-cursos, Demo-kitchens, alunos, profissionais, docentes e comunidade em geral.</p>
       </div>
     </div>
   </section>
 
+  <!-- INSCRIÇÕES -->
   <section id="inscricoes" class="py-20 bg-creme text-center">
     <div class="max-w-4xl mx-auto px-4">
       <h2 class="text-4xl font-bold mb-8 text-dark">Inscreva-se no JONUB 2026</h2>
@@ -81,30 +84,22 @@
     </div>
   </section>
 
+  <!-- RODAPÉ -->
   <footer class="bg-creme border-t border-[#e8d9c0] py-12 text-center">
     <p class="text-dark text-xl">© 2026 JONUB - Jornada de Nutrição da UNESP de Botucatu</p>
   </footer>
 
-  <!-- SCRIPT DO MENU MOBILE (Melhorado) -->
+  <!-- Script Menu Mobile -->
   <script>
     const menuBtn = document.getElementById('menu-btn');
     const mobileMenu = document.getElementById('mobile-menu');
 
-    // Abrir/Fechar menu
     menuBtn.addEventListener('click', () => {
       mobileMenu.classList.toggle('hidden');
     });
 
-    // Fechar ao clicar em qualquer link
-    document.querySelectorAll('.mobile-link').forEach(link => {
-      link.addEventListener('click', () => {
-        mobileMenu.classList.add('hidden');
-      });
-    });
-
-    // Fechar ao clicar no botão de inscrição
-    document.querySelectorAll('.btn-inscreva').forEach(btn => {
-      btn.addEventListener('click', () => {
+    document.querySelectorAll('.mobile-link, .btn-inscreva').forEach(item => {
+      item.addEventListener('click', () => {
         mobileMenu.classList.add('hidden');
       });
     });
