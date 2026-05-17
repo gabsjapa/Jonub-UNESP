@@ -12,16 +12,14 @@ body {
 .bg-creme { background-color: #f8f4eb; }
 .text-dark { color: #1e3a2f; }
 
-/* Botões em Verde Escuro */
-.btn-primary {
-  background-color: #166534;        /* Verde escuro */
+/* Botões em VERDE ESCURO */
+.btn-inscreva {
+  background-color: #166534;     /* Verde escuro */
   color: white;
   transition: all 0.3s ease;
 }
 
-.btn-primary:hover {
-  background-color: #14532d;        /* Verde mais escuro no hover */
+.btn-inscreva:hover {
+  background-color: #14532d;     /* Verde mais escuro */
   transform: scale(1.05);
 }
-
-.accent { color: #166534; }
